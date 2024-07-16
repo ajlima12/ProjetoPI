@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Estático com Calendário</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core/main.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid/main.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container menu-container">
+    <div class="profile-info">
+      <img src="profile.jpg" alt="Profile">
+      <h5>Giovanna da Silva</h5>
+      <p>giovanna.santosedasilva@gmail.com</p>
+      <p>RA: 11134241332</p>
+    </div>
+    <div class="menu">
+      <div class="menu-item">
+        <i class="fas fa-book"></i>
+        <span>Plano Adaptativo</span>
+      </div>
+      <div class="menu-item">
+        <i class="fas fa-users"></i>
+        <span>Grupo</span>
+      </div>
+      <div class="menu-item">
+        <i class="fas fa-comments"></i>
+        <span>Chat</span>
+      </div>
+      <div class="menu-item">
+        <i class="fas fa-user-plus"></i>
+        <span>Convite</span>
+      </div>
+    </div>
+    <div class="calendar-container">
+      <h5>Calendário</h5>
+      <div id="calendar"></div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- FullCalendar JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid/main.min.js"></script>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        plugins: [ 'dayGrid' ],
+        events: [
+          // Aqui você pode adicionar eventos dinamicamente, se necessário
+        ]
+      });
+
+      calendar.render();
+    });
+  </script>
+</body>
+</html>
